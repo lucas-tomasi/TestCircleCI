@@ -5,9 +5,10 @@ jobs:
       - image: circleci/php:7.2-apache-stretch-node-browsers
     steps:
       - checkout
+    run:
       - composer install
   test:
-    steps:
+    run:
       - vendor/phpunit/phpunit/phpunit Teste
 workflows:
   version: 2
