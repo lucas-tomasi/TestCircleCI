@@ -7,8 +7,3 @@ jobs:
       - checkout
       - run:  composer install
       - run:  vendor/phpunit/phpunit/phpunit Teste
-workflows:
-  version: 3
-  build_and_test:
-    jobs:
-      - build_and_test
