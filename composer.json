@@ -1,0 +1,13 @@
+{
+    "name": "lucas/test-circle-ci",
+    "authors": [
+        {
+            "name": "Lucas Tomasi",
+            "email": "lcstomasi@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
