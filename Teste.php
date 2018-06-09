@@ -12,8 +12,8 @@ class Teste extends TestCase
 		return $this->assertEquals(Functions::sum(1,1), 2);
 	}
 
-	public function testeSoma2()
+	public function division()
 	{
-		return $this->assertEquals(Functions::sum(10,1), 11);
+		return $this->assertEquals(Functions::division(10,1), 10);
 	}
 }

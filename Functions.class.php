@@ -6,4 +6,9 @@ class Functions
 	{
 		return $x + $y;
 	}
+
+	public static function division($x, $y)
+	{
+		return $x / $y;
+	}
 }
