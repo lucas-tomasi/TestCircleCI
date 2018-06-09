@@ -1,9 +1,7 @@
-machine:
-  php:
-    version: 7.0.4
-dependencies:
-  override:
-    - composer install
-test:
-  override:
-      - vendor/bin/phpunit
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.2-apache-stretch-node-browsers
+    steps:
+      - checkout
