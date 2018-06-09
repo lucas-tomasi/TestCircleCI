@@ -1,18 +1,14 @@
-version: 2
+version: 3
 jobs:
-  build:
+  build_and_test:
     docker:
       - image: circleci/php:7.2-apache-stretch-node-browsers
     steps:
       - checkout
-    run:
-      - composer install
-  test:
-    run:
-      - vendor/phpunit/phpunit/phpunit Teste
+      - run:  composer install
+      - run:  vendor/phpunit/phpunit/phpunit Teste
 workflows:
-  version: 2
+  version: 3
   build_and_test:
     jobs:
-      - build
-      - test
+      - build_and_test
