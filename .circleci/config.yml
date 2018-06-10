@@ -42,4 +42,5 @@ jobs:
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar; ls -la ;
       - run:
           name: "Deploy"
-          command: ./deployer.phar deploy -q
+          command: ssh -o "StrictHostKeyChecking no" lucas-tomasi@138.68.174.210
+          command: ./deployer.phar deploy
