@@ -34,4 +34,10 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
         
       # run tests!
-      - run: vendor/phpunit/phpunit/phpunit Teste
+      - run: 
+          name: "Testes"
+          command: vendor/phpunit/phpunit/phpunit Teste
+      - run: 
+          name: "Deploy"
+          command: wget  https://deployer.org/deployer.phar
+          command: deployer.phar deploy
