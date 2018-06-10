@@ -43,6 +43,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "e4:6c:d3:e4:d5:1c:ca:39:26:2b:ec:9a:21:dd:74:4c"
+      - add_ssh_keys:
+          fingerprints:
+           - "18:58:c5:8a:df:93:f0:75:ae:9b:53:a4:d3:90:b5:d6"
       - run:
           name: "Deploy"
           command: cat ~/.ssh/config
