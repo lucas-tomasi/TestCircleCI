@@ -25,6 +25,7 @@ set('writable_dirs', []);
 host('138.68.174.210')
     ->set('deploy_path', '~/{{application}}')
     ->identityFile('~/.ssh/id_sra')
+    ->set('git_tty', true);
     ->user('lucas-tomasi');    
     
 
