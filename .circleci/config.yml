@@ -41,9 +41,11 @@ jobs:
           name: "Install Deploy"
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar; ls -la ;
       - run:
-          name: "Deploy"
+          name: "Pre Deploy"
           command: cat ~/.ssh/config
           command: echo "Host *" >>  ~/.ssh/config
           command: echo "    StrictHostKeyChecking no" >>  ~/.ssh/config
           command: cat ~/.ssh/config
+      - run:
+          name: "Deploy"
           command: ./deployer.phar deploy
