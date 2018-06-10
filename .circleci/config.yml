@@ -46,7 +46,7 @@ jobs:
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - run:
           name: PHP
-          command: php -v
+          command: /usr/bin/php -v
       - run:
           name: Deploy Over SSH
           command: ./deployer.phar deploy
