@@ -46,7 +46,7 @@ jobs:
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - run:
           name: PHP
-          command: /usr/bin/php -v
+          command: docker-compose exec php -v
       - run:
           name: Deploy Over SSH
           command: ./deployer.phar deploy
