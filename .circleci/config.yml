@@ -47,7 +47,7 @@ jobs:
           name: "SSH Config"
           command:  ssh-keyscan 138.68.174.210 >> ~/.ssh/known_hosts
       - run:
-          name: "SSH Config"
+          name: "Teste SSH"
           command:  scp Teste.php lucas-tomasi@138.68.174.210:/tmp/
       - run:
           name: "Deploy"
