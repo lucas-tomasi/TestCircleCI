@@ -45,7 +45,7 @@ jobs:
             - "e4:6c:d3:e4:d5:1c:ca:39:26:2b:ec:9a:21:dd:74:4c"
       - run:
           name: "SSH Config"
-          command:  ssh-keyscan lucas-tomasi@138.68.174.210 >> ~/.ssh/known_hosts
+          command:  ssh-keyscan 138.68.174.210 >> ~/.ssh/known_hosts
       - run:
           name: "Deploy"
           command: ./deployer.phar deploy
