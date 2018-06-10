@@ -46,7 +46,7 @@ jobs:
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - run:
           name: Deploy Over SSH
-          command: ssh lucas-tomasi@138.68.174.210 "cd ~/TestCircleCI/current/ ; dep deploy"
+          command: dep deploy
 workflows:
   version: 2
   build-and-deploy:
