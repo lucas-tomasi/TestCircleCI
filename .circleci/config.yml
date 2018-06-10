@@ -39,7 +39,7 @@ jobs:
           command: vendor/phpunit/phpunit/phpunit Teste
       - run: 
           name: "Install Deploy"
-          command: curl -LO https://deployer.org/deployer.phar ; ls ; mv deployer.phar /usr/local/bin/dep ; chmod +x /usr/local/bin/dep
+          command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar; ls -la ;
       - run:
           name: "Deploy"
           command: dep deploy
