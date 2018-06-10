@@ -40,9 +40,9 @@ jobs:
       - run: 
           name: "Install Deploy"
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar; ls -la ;
-      - run:
-          name: "Pre Deploy"
-          command: mkdir -p ~/.ssh  && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+      - add_ssh_keys:
+    fingerprints:
+      - "e4:6c:d3:e4:d5:1c:ca:39:26:2b:ec:9a:21:dd:74:4c"
       - run:
           name: "Deploy"
           command: ./deployer.phar deploy
