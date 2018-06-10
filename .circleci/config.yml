@@ -46,7 +46,7 @@ jobs:
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - run:
           name: Deploy Over SSH
-          command: dep deploy
+          command: ./deployer.phar deploy
 workflows:
   version: 2
   build-and-deploy:
