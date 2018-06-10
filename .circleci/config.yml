@@ -37,13 +37,13 @@ jobs:
       - run: 
           name: "Testes"
           command: vendor/phpunit/phpunit/phpunit Teste
-      - run: 
-          name: "Install Deploy"
-          command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
   deploy:
     machine:
       enabled: true
     steps:
+      - run: 
+          name: "Install Deploy"
+          command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - run:
           name: Deploy Over SSH
           command: ./deployer.phar deploy
