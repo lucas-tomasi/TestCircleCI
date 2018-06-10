@@ -9,9 +9,6 @@ set('application', 'TestCircleCI');
 // Project repository
 set('repository', 'https://github.com/lucas-tomasi/TestCircleCI.git');
 
-// [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
-
 // Shared files/dirs between deploys 
 set('shared_files', []);
 set('shared_dirs', []);
@@ -25,7 +22,6 @@ set('writable_dirs', []);
 host('138.68.174.210')
     ->set('deploy_path', '~/{{application}}')
     ->identityFile('~/.ssh/id_sra')
-    ->set('git_tty', true);
     ->user('lucas-tomasi');    
     
 
