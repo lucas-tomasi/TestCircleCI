@@ -41,15 +41,9 @@ jobs:
     machine:
       enabled: true
     steps:
-      - run: 
-          name: "Install Deploy"
-          command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
-      - run:
-          name: PHP
-          command: docker-compose exec php -v
       - run:
           name: Deploy Over SSH
-          command: ./deployer.phar deploy
+          command: ssh lucas-tomasi@138.68.174.210 "dep deploy"
 workflows:
   version: 2
   build-and-deploy:
