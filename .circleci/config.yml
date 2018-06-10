@@ -42,4 +42,4 @@ jobs:
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar; ls -la ;
       - run:
           name: "Deploy"
-          command: dep deploy
+          command: ./deployer.phar deploy
