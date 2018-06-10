@@ -45,6 +45,9 @@ jobs:
           name: "Install Deploy"
           command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - run:
+          name: PHP
+          command: php -v
+      - run:
           name: Deploy Over SSH
           command: ./deployer.phar deploy
 workflows:
