@@ -45,7 +45,7 @@ jobs:
             - "e4:6c:d3:e4:d5:1c:ca:39:26:2b:ec:9a:21:dd:74:4c"
       - run:
           name: "SSH Config"
-          command: mkdir -p ~/.ssh; echo "Host *" > ~/.ssh/config ; echo " StrictHostKeyChecking no" >> ~/.ssh/config 
+          command: echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBW752OOZ3sC27p9kHXXJF1pCVjrs80XAnwKovOt/YcS8pInVDZcGJ9SAC3b7MVXWaHYgQKHg1XOmCuGTJ9XAWkLB30tcfdMDniHRrq/0oAE9fjESgJxYugaxT4+t1RP/rs2sQ5UD4qS3A//Unq1jERM/7SA+msHx91FRTjbZzmI51pfc1/nbB6M87FAQ/hrSn7pLnCZ8ntII+mLrrTVuh282xe1mkNkE7ThHxPQ7FdVvKD4LDBXKEz/WEvRbZD4uBwsEaoCEPqniu7mx0/vbdongxSr44jWybexaQh8+m+C27IExVmcVsNQwUFPliYX2gWKlzExm0UxCX3esYuTdn lucas-tomasi@lucas-deploy" >> ~/.ssh/known_hosts
       - run:
           name: "Deploy"
           command: ./deployer.phar deploy
