@@ -43,7 +43,6 @@ jobs:
       - run:
           name: "Pre Deploy"
           command: mkdir -p ~/.ssh [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-          command: cat ~/.ssh/config
       - run:
           name: "Deploy"
           command: ./deployer.phar deploy
