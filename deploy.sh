@@ -1,0 +1,1 @@
+ssh lucas-tomasi@138.68.174.210 "dep deploy"
