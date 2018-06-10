@@ -39,12 +39,7 @@ jobs:
           command: vendor/phpunit/phpunit/phpunit Teste
       - run: 
           name: "Install Deploy"
-          command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar; ls -la ;
-      - run:
-          name: "Pre Deploy"
-          command: touch ~/.ssh/config
-          command: echo -e "Host *\n\tStrictHostKeyChecking no\n\n" >> ~/.ssh/config
-          command: cat ~/.ssh/config
+          command: curl -LO https://deployer.org/deployer.phar ; chmod +x deployer.phar;
       - add_ssh_keys:
           fingerprints:
             - "e4:6c:d3:e4:d5:1c:ca:39:26:2b:ec:9a:21:dd:74:4c"
